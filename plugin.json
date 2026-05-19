@@ -1,20 +1,153 @@
 {
-  "Id": "{{.Id}}",
-  "TriggerKeywords": [
-    "{{.TriggerKeyword}}"
-  ],
-  "Name": "{{.Name}}",
-  "Description": "{{.Description}}",
-  "Author": "{{.Author}}",
-  "Version": "0.0.5",
-  "MinWoxVersion": "2.0.0",
+  "Id": "94fbbf13-3bd3-4a26-b710-96e8ecda59ac",
+  "TriggerKeywords": ["*"],
+  "Name": "i18n:plugin_name",
+  "Description": "i18n:plugin_description",
+  "Author": "qianlifeng",
+  "Version": "0.0.1",
+  "MinWoxVersion": "2.1.0",
   "Runtime": "nodejs",
-  "Website": "{{.Website}}",
+  "Website": "https://github.com/qianlifeng/Wox.Plugin.HotkeyTrigger",
   "Entry": "index.js",
-  "Icon": "relative:images/app.svg",
-  "SupportedOS": [
-    "windows",
-    "linux",
-    "darwin"
+  "Icon": "relative:images/app.png",
+  "SupportedOS": ["windows", "darwin"],
+  "I18n": {
+    "en_US": {
+      "plugin_name": "HotkeyTrigger",
+      "plugin_description": "Trigger configured hotkeys from global Wox shortcuts",
+      "shortcuts_title": "Shortcuts",
+      "shortcuts_tooltip": "Configure global Wox keyword shortcuts. Keywords are comma-separated aliases, Hotkey uses modifier+key syntax, and selecting a matched result sends the configured system hotkey.",
+      "setting_keywords_label": "Keywords",
+      "setting_keywords_tooltip": "Required. Comma-separated keywords that trigger this shortcut. Example: jp,shot,screenshot. Matching is case-insensitive; spaces around commas are ignored; duplicates are ignored.",
+      "setting_name_label": "Name",
+      "setting_name_tooltip": "Required. Display name shown in Wox results. Example: QQ Screenshot.",
+      "setting_hotkey_label": "Hotkey",
+      "setting_hotkey_tooltip": "Required. Use modifier+key format. Examples: ctrl+alt+a, cmd+shift+4, control+option+space. Modifiers: ctrl/control, alt/option, shift, cmd/command/meta. Windows supports ctrl, alt, shift. macOS supports ctrl, alt/option, shift, cmd.",
+      "setting_enabled_label": "Enabled",
+      "setting_enabled_tooltip": "Enable or disable this shortcut row. Disabled rows are ignored and will not appear in Wox results.",
+      "setting_description_label": "Description",
+      "setting_description_tooltip": "Optional. Extra text shown under the result title to explain what the shortcut does."
+    },
+    "zh_CN": {
+      "plugin_name": "HotkeyTrigger",
+      "plugin_description": "通过 Wox 全局短码触发已配置的系统快捷键",
+      "shortcuts_title": "快捷键",
+      "shortcuts_tooltip": "配置 Wox 全局短码快捷键。Keywords 使用英文逗号分隔多个别名，Hotkey 使用 modifier+key 格式，选择匹配结果后会发送配置的系统快捷键。",
+      "setting_keywords_label": "关键词",
+      "setting_keywords_tooltip": "必填。用于触发该快捷键的关键词，多个关键词用英文逗号分隔。示例：jp,shot,screenshot。匹配不区分大小写；逗号两侧空格会被忽略；重复项会被忽略。",
+      "setting_name_label": "名称",
+      "setting_name_tooltip": "必填。显示在 Wox 结果中的名称。示例：QQ Screenshot。",
+      "setting_hotkey_label": "快捷键",
+      "setting_hotkey_tooltip": "必填。使用 modifier+key 格式。示例：ctrl+alt+a、cmd+shift+4、control+option+space。支持的修饰键：ctrl/control、alt/option、shift、cmd/command/meta。Windows 支持 ctrl、alt、shift；macOS 支持 ctrl、alt/option、shift、cmd。",
+      "setting_enabled_label": "启用",
+      "setting_enabled_tooltip": "启用或禁用这一行快捷键。禁用后会被忽略，不会出现在 Wox 结果中。",
+      "setting_description_label": "说明",
+      "setting_description_tooltip": "可选。显示在结果标题下方的补充说明，用来解释这个快捷键的用途。"
+    },
+    "pt_BR": {
+      "plugin_name": "HotkeyTrigger",
+      "plugin_description": "Acione atalhos configurados por palavras-chave globais do Wox",
+      "shortcuts_title": "Atalhos",
+      "shortcuts_tooltip": "Configure atalhos globais por palavra-chave no Wox. Keywords usa aliases separados por virgula, Hotkey usa a sintaxe modifier+key, e selecionar um resultado envia o atalho do sistema configurado.",
+      "setting_keywords_label": "Keywords",
+      "setting_keywords_tooltip": "Obrigatorio. Palavras-chave separadas por virgula que acionam este atalho. Exemplo: jp,shot,screenshot. A busca ignora maiusculas/minusculas; espacos ao redor das virgulas sao ignorados; duplicados sao ignorados.",
+      "setting_name_label": "Nome",
+      "setting_name_tooltip": "Obrigatorio. Nome exibido nos resultados do Wox. Exemplo: QQ Screenshot.",
+      "setting_hotkey_label": "Hotkey",
+      "setting_hotkey_tooltip": "Obrigatorio. Use o formato modifier+key. Exemplos: ctrl+alt+a, cmd+shift+4, control+option+space. Modificadores: ctrl/control, alt/option, shift, cmd/command/meta. Windows suporta ctrl, alt, shift. macOS suporta ctrl, alt/option, shift, cmd.",
+      "setting_enabled_label": "Ativado",
+      "setting_enabled_tooltip": "Ativa ou desativa esta linha de atalho. Linhas desativadas sao ignoradas e nao aparecem nos resultados do Wox.",
+      "setting_description_label": "Descricao",
+      "setting_description_tooltip": "Opcional. Texto extra exibido abaixo do titulo do resultado para explicar o que o atalho faz."
+    },
+    "ru_RU": {
+      "plugin_name": "HotkeyTrigger",
+      "plugin_description": "Запускает настроенные горячие клавиши через глобальные ключевые слова Wox",
+      "shortcuts_title": "Горячие клавиши",
+      "shortcuts_tooltip": "Настройте глобальные ключевые слова Wox для горячих клавиш. Keywords содержит псевдонимы через запятую, Hotkey использует формат modifier+key, а выбор результата отправляет настроенную системную горячую клавишу.",
+      "setting_keywords_label": "Keywords",
+      "setting_keywords_tooltip": "Обязательно. Ключевые слова через запятую, которые запускают этот ярлык. Пример: jp,shot,screenshot. Поиск не учитывает регистр; пробелы вокруг запятых игнорируются; дубликаты игнорируются.",
+      "setting_name_label": "Название",
+      "setting_name_tooltip": "Обязательно. Название, которое показывается в результатах Wox. Пример: QQ Screenshot.",
+      "setting_hotkey_label": "Hotkey",
+      "setting_hotkey_tooltip": "Обязательно. Используйте формат modifier+key. Примеры: ctrl+alt+a, cmd+shift+4, control+option+space. Модификаторы: ctrl/control, alt/option, shift, cmd/command/meta. Windows поддерживает ctrl, alt, shift. macOS поддерживает ctrl, alt/option, shift, cmd.",
+      "setting_enabled_label": "Включено",
+      "setting_enabled_tooltip": "Включает или отключает эту строку ярлыка. Отключенные строки игнорируются и не отображаются в результатах Wox.",
+      "setting_description_label": "Описание",
+      "setting_description_tooltip": "Необязательно. Дополнительный текст под заголовком результата, объясняющий назначение ярлыка."
+    }
+  },
+  "SettingDefinitions": [
+    {
+      "Type": "table",
+      "Value": {
+        "Key": "shortcuts",
+        "DefaultValue": "[]",
+        "Title": "i18n:shortcuts_title",
+        "Tooltip": "i18n:shortcuts_tooltip",
+        "SortColumnKey": "name",
+        "SortOrder": "asc",
+        "MaxHeight": 500,
+        "Columns": [
+          {
+            "Key": "keywords",
+            "Label": "i18n:setting_keywords_label",
+            "Type": "text",
+            "Width": 160,
+            "TextMaxLines": 1,
+            "Tooltip": "i18n:setting_keywords_tooltip",
+            "Validators": [
+              {
+                "Type": "not_empty",
+                "Value": {}
+              }
+            ]
+          },
+          {
+            "Key": "name",
+            "Label": "i18n:setting_name_label",
+            "Type": "text",
+            "Width": 160,
+            "TextMaxLines": 1,
+            "Tooltip": "i18n:setting_name_tooltip",
+            "Validators": [
+              {
+                "Type": "not_empty",
+                "Value": {}
+              }
+            ]
+          },
+          {
+            "Key": "hotkey",
+            "Label": "i18n:setting_hotkey_label",
+            "Type": "text",
+            "Width": 140,
+            "TextMaxLines": 1,
+            "Tooltip": "i18n:setting_hotkey_tooltip",
+            "Validators": [
+              {
+                "Type": "not_empty",
+                "Value": {}
+              }
+            ]
+          },
+          {
+            "Key": "enabled",
+            "Label": "i18n:setting_enabled_label",
+            "Type": "checkbox",
+            "Width": 80,
+            "Tooltip": "i18n:setting_enabled_tooltip"
+          },
+          {
+            "Key": "description",
+            "Label": "i18n:setting_description_label",
+            "Type": "text",
+            "Width": 220,
+            "TextMaxLines": 2,
+            "Tooltip": "i18n:setting_description_tooltip"
+          }
+        ]
+      }
+    }
   ]
 }
